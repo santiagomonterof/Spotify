@@ -1,0 +1,129 @@
+::-webkit-scrollbar {
+    /* Webkit */
+    width: 0;
+    height: 0;
+}
+
+.hs {
+    display: flex;
+    overflow-x: scroll;
+    justify-content: space-between;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE 10+ */
+    -webkit-overflow-scrolling: touch;
+    margin: 0 -20px;
+}
+
+.hs__header {
+    display: flex;
+    align-items: right;
+    width: 100%;
+}
+
+.hs__headline {
+    flex: 1;
+}
+
+.hs__arrows {
+    align-self: center;
+}
+
+.hs__arrows .arrow:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    content: "";
+    background: url() no-repeat center center;
+    width: 18px;
+    height: 12px;
+    cursor: pointer;
+}
+
+
+.hs__item {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: calc(100% / 4 - (10px * 2) - (20px / 4));
+    margin: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    user-select: none;
+}
+
+
+.hs__item:last-child:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 1px;
+    right: calc(10px * 2 * -1);
+}
+
+
+.hs__item__description {
+    z-index: 1;
+    align-self: flex-start;
+    margin: 10px 0;
+}
+
+.hs__item__subtitle {
+    color: #aaa;
+    display: block;
+}
+
+.container_center {
+    max-width: 1688px;
+    margin-left: 230px;
+    padding: calc(10px * 2);
+    background: #121212;
+    position: relative;
+}
+
+
+.hs__item__image {
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+}
+
+.hs__item__image__wrapper {
+    background-color: rgb(23, 23, 23);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.hs__headline {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 22px;
+}
+
+.arrow {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.hs__item__title {
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.hs__item__subtitle {
+    margin-top: -8px;
+}
+
+a:not([href]):not([class]),
+a:not([href]):not([class]):hover {
+    color: white;
+    margin-left: 5px;
+}
